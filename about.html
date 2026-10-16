@@ -1,40 +1,44 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Giới Thiệu - Khám Phá Thiên Nhiên</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>About - Exploring Nature</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <a href="#main-content" class="skip-link">Skip to Main Content</a>
 
     <header>
         <nav class="navbar" aria-label="Main Navigation">
-            <a href="index.html">Trang Chủ</a>
-            <a href="gallery.html">Bộ Sưu Tập (6 Ảnh)</a>
-            <a href="about.html" class="active">Giới Thiệu</a>
+            <a href="index.html">Home</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="about.html" class="active">About</a>
         </nav>
     </header>
 
     <main id="main-content">
-        <h1>Về Dự Án Này</h1>
-        <p class="intro">Trang này sử dụng Flexbox để căn chỉnh hình ảnh song song, kết hợp hiệu ứng chuyển động mượt mà khi di chuột qua từng bức ảnh.</p>
+        <h1>About This Project</h1>
+        <p class="intro">This page uses CSS Flexbox to arrange images dynamically, paired with smooth hover transitions and the nth-child selector to give every other image a distinct border radius.</p>
 
         <div class="flex-gallery">
             <div class="item">
-                <img src="https://images.unsplash.com/photo-1433086966358-54859d0ed716?w=800&auto=format&fit=crop&q=80" alt="Thác nước trắng xóa đổ xuống giữa khu rừng nguyên sinh">
-                <p class="caption">Thác nước nguyên sinh</p>
+                <img src="https://images.unsplash.com/photo-1433086966358-54859d0ed716?w=800&auto=format&fit=crop&q=80" alt="White waterfall cascading down mossy rocks in an old-growth forest">
+                <p class="caption">Hidden Forest Waterfall</p>
             </div>
             <div class="item">
-                <img src="https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07?w=800&auto=format&fit=crop&q=80" alt="Cánh đồng hoa dại màu cam nở rộ dưới bầu trời xanh">
-                <p class="caption">Mùa hoa dại nở</p>
+                <img src="https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07?w=800&auto=format&fit=crop&q=80" alt="Field of vibrant orange wildflowers blooming under a clear blue sky">
+                <p class="caption">Wildflower Meadow in Bloom</p>
+            </div>
+            <div class="item">
+                <img src="https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?w=800&auto=format&fit=crop&q=80" alt="Tall pine trees surrounded by golden autumn mist at dawn">
+                <p class="caption">Autumn Pines in the Mist</p>
+            </div>
+            <div class="item">
+                <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=800&auto=format&fit=crop&q=80" alt="Dramatic snow-capped mountain peak rising above dark green valleys">
+                <p class="caption">Alpine Summit Vista</p>
             </div>
         </div>
     </main>
-
-    <footer>
-        <p>&copy; 2026 Dự Án Nhiếp Ảnh Thiên Nhiên. Đã kiểm tra W3C & WAVE.</p>
-    </footer>
 </body>
 </html>
