@@ -1,0 +1,193 @@
+/* Global Reset & Typography */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background-color: #f8f9fa;
+    color: #212529;
+}
+
+/* Requirement 2: Style "Skip to Main Content" link using position and :focus pseudo-class */
+.skip-link {
+    position: absolute;
+    top: -100px;
+    left: 20px;
+    background-color: #0b5ed7;
+    color: #ffffff;
+    padding: 12px 20px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 6px;
+    z-index: 1000;
+    transition: top 0.3s ease;
+}
+
+.skip-link:focus {
+    top: 15px;
+    outline: 3px solid #ffc107;
+}
+
+/* Requirements 3 & 6: Style navigation with 3+ CSS properties and apply Flexbox */
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    background-color: #1e293b;
+    padding: 18px 24px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.navbar a {
+    color: #f8fafc;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 600;
+    padding: 8px 16px;
+    border-radius: 6px;
+    transition: background-color 0.25s ease, transform 0.2s ease;
+}
+
+/* Requirement 7: Update elements using the :hover pseudo-class with smooth transitions */
+.navbar a:hover,
+.navbar a.active {
+    background-color: #3b82f6;
+    color: #ffffff;
+    transform: translateY(-2px);
+}
+
+/* Main Content Layout */
+main {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+h1 {
+    font-size: 2.2rem;
+    color: #0f172a;
+    margin-bottom: 16px;
+    text-align: center;
+}
+
+p.intro {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 32px auto;
+    color: #475569;
+    font-size: 1.1rem;
+}
+
+/* Interactive Photo Gallery Display Box (#image) */
+#image {
+    width: 100%;
+    max-width: 800px;
+    height: 400px;
+    margin: 0 auto 36px auto;
+    border: 5px solid #1e293b;
+    border-radius: 16px;
+    background-color: #334155;
+    background-image: url('');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: #ffffff;
+    font-size: 1.35rem;
+    font-weight: 700;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.85), 0 0 4px rgba(0, 0, 0, 0.9);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    transition: background-image 0.3s ease-in-out;
+}
+
+.preview {
+    cursor: pointer;
+}
+
+/* Requirement 4: Style all images using the box model (border, padding, border-radius) */
+img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    display: block;
+    border: 4px solid #334155;
+    padding: 8px;
+    border-radius: 16px;
+    background-color: #ffffff;
+    transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease, border-radius 0.35s ease;
+}
+
+/* Requirement 5: Apply the grid property to at least one parent element with at least two columns */
+.grid-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+/* Requirement 6: Apply the flex property to at least one parent element */
+.flex-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    justify-content: center;
+}
+
+.flex-gallery .item {
+    flex: 1 1 300px;
+    max-width: 480px;
+}
+
+/* Requirement 8: Implement the nth-child selector to give every other image a different border-radius */
+.grid-gallery .card:nth-child(odd) img,
+.flex-gallery .item:nth-child(odd) img {
+    border-radius: 36px 8px 36px 8px;
+    border-color: #0d9488;
+}
+
+.grid-gallery .card:nth-child(even) img,
+.flex-gallery .item:nth-child(even) img {
+    border-radius: 8px 36px 8px 36px;
+    border-color: #4f46e5;
+}
+
+/* Requirement 7: Interesting :hover effect on images (placed after nth-child so hover takes precedence) */
+img:hover,
+.grid-gallery .card:nth-child(odd) img:hover,
+.grid-gallery .card:nth-child(even) img:hover,
+.flex-gallery .item:nth-child(odd) img:hover,
+.flex-gallery .item:nth-child(even) img:hover {
+    transform: scale(1.04) translateY(-4px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.22);
+    border-color: #f59e0b;
+    border-radius: 18px;
+}
+
+.caption {
+    text-align: center;
+    margin-top: 10px;
+    font-weight: 600;
+    color: #334155;
+}
+
+footer {
+    text-align: center;
+    padding: 24px;
+    margin-top: 60px;
+    background-color: #1e293b;
+    color: #cbd5e1;
+}
+
+@media (max-width: 768px) {
+    .grid-gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}

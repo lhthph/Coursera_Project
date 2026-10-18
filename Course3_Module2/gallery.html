@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - Exploring Nature</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to Main Content</a>
+
+    <header>
+        <nav class="navbar" aria-label="Main Navigation">
+            <a href="index.html">Home</a>
+            <a href="gallery.html" class="active">Gallery</a>
+            <a href="about.html">About</a>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        <h1>Landscape Photo Gallery</h1>
+
+        <div id="image">
+            Hover over an image below to display here.
+        </div>
+
+        <div class="grid-gallery">
+            <div class="card">
+                <img class="preview" src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=800&auto=format&fit=crop&q=80" alt="Sunlight streaming through the lush green canopy of a dense forest" onmouseover="upDate(this)" onmouseout="undo()">
+                <p class="caption">Sunlit Woodland Canopy</p>
+            </div>
+            <div class="card">
+                <img class="preview" src="https://images.unsplash.com/photo-1472214103451-9374bd1c798e?w=800&auto=format&fit=crop&q=80" alt="Rolling green meadow stretching beneath a vibrant sunset sky" onmouseover="upDate(this)" onmouseout="undo()">
+                <p class="caption">Golden Hour Over the Meadow</p>
+            </div>
+            <div class="card">
+                <img class="preview" src="https://images.unsplash.com/photo-1501854140801-50d01698950b?w=800&auto=format&fit=crop&q=80" alt="Aerial view looking down at a lush green mountain range" onmouseover="upDate(this)" onmouseout="undo()">
+                <p class="caption">Emerald Mountain Ridges</p>
+            </div>
+            <div class="card">
+                <img class="preview" src="https://images.unsplash.com/photo-1426604966848-d7adac402bff?w=800&auto=format&fit=crop&q=80" alt="Towering granite cliff beside a green pine forest under a blue sky" onmouseover="upDate(this)" onmouseout="undo()">
+                <p class="caption">Granite Cliffs and Pines</p>
+            </div>
+            <div class="card">
+                <img class="preview" src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=800&auto=format&fit=crop&q=80" alt="Rays of morning sunlight breaking over rugged mountain peaks" onmouseover="upDate(this)" onmouseout="undo()">
+                <p class="caption">Sunrise Above the Peaks</p>
+            </div>
+            <div class="card">
+                <img class="preview" src="https://images.unsplash.com/photo-1518173946687-a4c8892bbd9f?w=800&auto=format&fit=crop&q=80" alt="Clear blue ocean waves gently washing onto a white sandy shore" onmouseover="upDate(this)" onmouseout="undo()">
+                <p class="caption">Ocean Breeze and Waves</p>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
