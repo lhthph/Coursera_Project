@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Exploring Nature</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body onload="addTabFocus()">
+    <a href="#main-content" class="skip-link">Skip to Main Content</a>
+
+    <header>
+        <nav class="navbar" aria-label="Main Navigation">
+            <a href="index.html">Home</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="about.html" class="active">About</a>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        <h1>About This Project</h1>
+        <p class="intro">This page uses CSS Flexbox to arrange six images dynamically, paired with keyboard focus support, smooth transitions, and the nth-child selector.</p>
+
+        <div id="image">
+            Hover over an image below to display here.
+        </div>
+
+        <div class="flex-gallery">
+            <div class="item">
+                <img class="preview" src="https://images.unsplash.com/photo-1433086966358-54859d0ed716?w=800&auto=format&fit=crop&q=80" alt="White waterfall cascading down mossy rocks in an old-growth forest" onmouseover="upDate(this)" onmouseleave="undo()" onfocus="upDate(this)" onblur="undo()">
+                <p class="caption">Hidden Forest Waterfall</p>
+            </div>
+            <div class="item">
+                <img class="preview" src="https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07?w=800&auto=format&fit=crop&q=80" alt="Field of vibrant orange wildflowers blooming under a clear blue sky" onmouseover="upDate(this)" onmouseleave="undo()" onfocus="upDate(this)" onblur="undo()">
+                <p class="caption">Wildflower Meadow in Bloom</p>
+            </div>
+            <div class="item">
+                <img class="preview" src="https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?w=800&auto=format&fit=crop&q=80" alt="Tall pine trees surrounded by golden autumn mist at dawn" onmouseover="upDate(this)" onmouseleave="undo()" onfocus="upDate(this)" onblur="undo()">
+                <p class="caption">Autumn Pines in the Mist</p>
+            </div>
+            <div class="item">
+                <img class="preview" src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=800&auto=format&fit=crop&q=80" alt="Dramatic snow-capped mountain peak rising above dark green valleys" onmouseover="upDate(this)" onmouseleave="undo()" onfocus="upDate(this)" onblur="undo()">
+                <p class="caption">Alpine Summit Vista</p>
+            </div>
+            <div class="item">
+                <img class="preview" src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=800&auto=format&fit=crop&q=80" alt="Majestic mountain valley reflecting in a calm lake at sunset" onmouseover="upDate(this)" onmouseleave="undo()" onfocus="upDate(this)" onblur="undo()">
+                <p class="caption">Yosemite Valley at Dusk</p>
+            </div>
+            <div class="item">
+                <img class="preview" src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&auto=format&fit=crop&q=80" alt="Golden sandy beach with turquoise ocean waves under a warm sky" onmouseover="upDate(this)" onmouseleave="undo()" onfocus="upDate(this)" onblur="undo()">
+                <p class="caption">Tranquil Tropical Coastline</p>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
